@@ -1,0 +1,88 @@
+{
+  "$schema": "./misc/plugins-schema.json",
+  "hide-preview.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "hide-preview.yazi"
+  },
+  "lsar.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "lsar.yazi"
+  },
+  "diff.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "diff.yazi"
+  },
+  "chmod.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "chmod.yazi"
+  },
+  "no-status.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "no-status.yazi"
+  },
+  "full-border.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "full-border.yazi"
+  },
+  "mount.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "mount.yazi"
+  },
+  "toggle-pane.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "toggle-pane.yazi"
+  },
+  "smart-filter.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "smart-filter.yazi"
+  },
+  "smart-enter.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "smart-enter.yazi"
+  },
+  "mactag.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "mactag.yazi"
+  },
+  "jump-to-char.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "jump-to-char.yazi"
+  },
+  "mime-ext.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "mime-ext.yazi"
+  },
+  "sudo-demo.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "sudo-demo.yazi"
+  },
+  "git.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "git.yazi"
+  },
+  "vcs-files.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "vcs-files.yazi"
+  },
+  "max-preview.yazi": {
+    "repo": "yazi-rs/plugins",
+    "rev": "2bf70d880e02db95394de360668325b46f804791",
+    "srcdir": "max-preview.yazi"
+  }
+}

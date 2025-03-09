@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Yazi Plugins",
+  "description": "",
+  "patternProperties": {
+    ".+": {
+      "type": "object",
+      "properties": {
+        "repo": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9-_.]+/[a-zA-Z0-9-_.]+$"
+        },
+        "rev": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9]+$"
+        },
+        "srcdir": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "repo",
+        "rev"
+      ]
+    }
+  }
+}
