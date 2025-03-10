@@ -84,7 +84,7 @@ def main [plugin_expr:string ...plugin_exprs:string]: any -> any {
         })
       }
     }
-    | reduce { |x, y| $x | merge $y}
+    | reduce { |x, y| $x | merge $y }
   )
   | to json
   | save -f $"($current_dir)/../plugins.json"
