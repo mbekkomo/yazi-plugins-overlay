@@ -16,6 +16,13 @@
       {
         packages = (import ./. pkgs pkgs).yaziPlugins;
 
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            nushell
+            nixfmt-tree
+          ];
+        };
+
         formatter = pkgs.nixfmt-tree;
       }
     )

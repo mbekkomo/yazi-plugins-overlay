@@ -29,4 +29,18 @@ in
   git-yazi = callPackage' ./git-yazi { };
   vcs-files-yazi = callPackage' ./vcs-files-yazi { };
   max-preview-yazi = callPackage' ./max-preview-yazi { };
+  mdcat-yazi = callPackage' ./mdcat-yazi { };
+  exifaudio-yazi = callPackage' ./exifaudio-yazi { };
+  ouch-yazi = callPackage' ./ouch-yazi { };
+  glow-yazi = callPackage' ./glow-yazi { };
+  hexyl-yazi = callPackage' ./hexyl-yazi { };
+  mediainfo-yazi = callPackage' ./mediainfo-yazi { };
+  torrent-preview-yazi = callPackage' ./torrent-preview-yazi { };
+  nbpreview-yazi = callPackage' ./nbpreview-yazi { };
+  relative-motions-yazi = callPackage' ./relative-motions-yazi { };
+  first-non-directory-yazi = callPackage' ./first-non-directory-yazi { };
+  time-travel-yazi = callPackage' ./time-travel-yazi { };
+  bookmarks-yazi = callPackage' ./bookmarks-yazi { };
+  cdhist-yazi = callPackage' ./cdhist-yazi { };
+  eza-preview-yazi = callPackage' ./eza-preview-yazi { };
 }
