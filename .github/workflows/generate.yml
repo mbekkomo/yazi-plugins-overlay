@@ -21,6 +21,6 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate packages
-        shell: nix develop --command bash -e ${0}
+        shell: nix develop --command bash -e {0}
         run: |
           nu ./scripts/gen-yazi-plugins.nu
