@@ -1,7 +1,7 @@
 use std/log
 
 const $current_dir = path self | path dirname
-const $plugins_dir = $"($current_dir)/../plugins"
+const $plugins_dir = $current_dir | path join .. plugins
 
 $env.NU_LOG_FORMAT = "%ANSI_START%%LEVEL%:%ANSI_STOP% %MSG%"
 
@@ -24,7 +24,7 @@ def generate_package [info] {
     };
 
     (
-      if (($info | get -i srcdir) != null) {
+      if ($info.srcdir? != null) {
         'srcdir = "' + $info.srcdir + '";'
       } else {
         ""
@@ -79,9 +79,9 @@ def main [..._] {
     let $pkg_name = $name
       | str replace -r "^[^a-zA-Z-_]" "_$1"
       | str replace -r -a "[^a-zA-Z0-9-_]" "-"
-    let $package_plugin_dir = $"($plugins_dir)/($pkg_name)"
+    let $package_plugin_dir = [$plugins_dir $pkg_name] | path join
 
-    if (not ($"($package_plugin_dir)/default.nix)" | path exists)) {
+    if (not ([$package_plugin_dir default.nix] | path join | path exists)) {
       let $git_info = nix-instantiate --eval --expr $"
           removeAttrs \(
             builtins.fetchGit {
@@ -111,18 +111,17 @@ def main [..._] {
       | save -f $"($package_plugin_dir)/default.nix"
     }
 
-    if (not (
-      open $"($plugins_dir)/default.nix"
-      | str contains $"($pkg_name) ="
-    )) {
-      let $contents = open $"($plugins_dir)/default.nix"
+    let $plugin_default_nix = [$plugins_dir default.nix] | path join | open
+
+    if (not ($plugin_default_nix | str contains $"($pkg_name) =")) {
+      let $contents = $plugin_default_nix
         | str replace ";\n}" $";\n($pkg_name) = callPackage' ./($pkg_name) { };\n}"
         | if ($env.__has_nixfmt == true) {
           nixfmt
         } else {
           $in
         }
-      $contents | save -f $"($plugins_dir)/default.nix"
+      $contents | save -f ([$plugins_dir default.nix] | path join)
     }
   }
 

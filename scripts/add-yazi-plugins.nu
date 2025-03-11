@@ -13,14 +13,14 @@ def get_plugin_info [expr] {
     }
   )
   let $repo = (
-    if ($has_monorepo == true) {
+    if ($has_monorepo) {
       $expr | str replace -r ":.+$" ""
     } else {
       $expr
     }
   )
   let $srcdir = (
-    if ($has_monorepo == true) {
+    if ($has_monorepo) {
       $expr | str replace -r "^.+/.+:" ""
     } else {
       null
