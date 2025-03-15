@@ -24,7 +24,7 @@ lib.extendMkDerivation {
         mkdir $out/
         cp -r * $out/
         popd
-        runHook postInstall
+        runHook preInstall
       '';
     };
 }

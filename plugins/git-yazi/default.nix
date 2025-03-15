@@ -14,7 +14,7 @@ mkYaziPlugin {
     hash = "sha256-0A5UVbrP9+GRvX14VQm4Yxw+P9Ca5gtlk9qkLCVf5+Q=";
   };
   
-  postInstall = ''
+  preInstall = ''
     rm $SRCDIR/LICENSE
     cp LICENSE $SRCDIR/LICENSE
   '';
