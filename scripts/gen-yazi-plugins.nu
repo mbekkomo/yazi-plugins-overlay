@@ -77,6 +77,7 @@ def main [..._] {
     log info $"Generating Nix package for ($name)"
 
     let $pkg_name = $name
+      | str replace -r '\.yazi$' ''
       | str replace -r "^[^a-zA-Z-_]" "_$1"
       | str replace -r -a "[^a-zA-Z0-9-_]" "-"
     let $package_plugin_dir = [$plugins_dir $pkg_name] | path join
