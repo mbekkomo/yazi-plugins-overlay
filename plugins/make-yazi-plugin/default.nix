@@ -18,6 +18,15 @@ lib.extendMkDerivation {
 
       strictDeps = true;
 
+      postUnpack = ''
+        # preserve yazi compatibility
+        if [[ ! -f ./main.lua ]]; then
+          ln -sr init.lua main.lua
+        elif [[ ! -f ./init.lua ]]; then
+          ln -sr main.lua init.lua
+        fi
+      '';
+
       installPhase = ''
         runHook preInstall
         pushd "$SRCDIR"
